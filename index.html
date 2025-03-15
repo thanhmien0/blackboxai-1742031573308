@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ Thống Quản Lý Bán Hàng</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Main Navigation -->
+    <nav class="bg-red-600 text-white">
+        <div class="container mx-auto">
+            <div class="flex items-center space-x-6 h-12">
+                <div class="font-bold text-2xl">B</div>
+                <a href="#" class="bg-blue-100 text-black px-4 py-1">Bán Hàng</a>
+                <a href="#" class="hover:bg-red-700 px-4 py-1">Nhập Hàng</a>
+                <a href="#" class="hover:bg-red-700 px-4 py-1">Hàng Hóa</a>
+                <a href="#" class="hover:bg-red-700 px-4 py-1">Bảo Hành</a>
+                <a href="#" class="hover:bg-red-700 px-4 py-1">Thu - Chi</a>
+                <a href="#" class="hover:bg-red-700 px-4 py-1">Nhân Viên</a>
+                <a href="#" class="hover:bg-red-700 px-4 py-1">Thống Kê</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sub Navigation -->
+    <div class="bg-blue-100 border-b">
+        <div class="container mx-auto">
+            <div class="flex space-x-4 h-10 items-center">
+                <a href="#" class="bg-white px-4 py-1 rounded">Bán Hàng</a>
+                <a href="#" class="hover:bg-white px-4 py-1 rounded">Khách Hàng</a>
+                <a href="#" class="hover:bg-white px-4 py-1 rounded">Báo Cáo</a>
+                <a href="#" class="hover:bg-white px-4 py-1 rounded">Công Nợ</a>
+                <a href="#" class="hover:bg-white px-4 py-1 rounded">Nhật Ký</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto mt-4">
+        <div class="grid grid-cols-12 gap-4">
+            <!-- Customer List -->
+            <div class="col-span-3 bg-white rounded-lg shadow p-4">
+                <div class="flex items-center justify-between mb-4">
+                    <select class="w-full p-2 border rounded">
+                        <option>- Tất Cả -</option>
+                    </select>
+                </div>
+                <input type="text" placeholder="Tìm kiếm..." class="w-full p-2 border rounded mb-2">
+                <div class="overflow-y-auto h-[600px]">
+                    <div class="border-b py-2 hover:bg-gray-100 cursor-pointer">- Khách Mua Lẻ -</div>
+                    <div class="border-b py-2 hover:bg-gray-100 cursor-pointer">a giang</div>
+                    <div class="border-b py-2 hover:bg-gray-100 cursor-pointer">anh Tình điện máy trọng Tình</div>
+                    <div class="border-b py-2 hover:bg-gray-100 cursor-pointer">Bác Kiên Giám Đốc Kinh Môn</div>
+                    <div class="border-b py-2 hover:bg-gray-100 cursor-pointer">Bác Thọ</div>
+                </div>
+            </div>
+
+            <!-- Product List -->
+            <div class="col-span-5 bg-white rounded-lg shadow p-4">
+                <div class="flex items-center justify-between mb-4">
+                    <select class="w-full p-2 border rounded">
+                        <option>- Tất Cả -</option>
+                    </select>
+                </div>
+                <input type="text" placeholder="Tìm kiếm..." class="w-full p-2 border rounded mb-2">
+                <div class="overflow-y-auto h-[600px]">
+                    <table class="w-full">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="text-left p-2">Tên Hàng</th>
+                                <th class="text-right p-2">SL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="p-2">Cáp Laptop Collbell</td>
+                                <td class="text-right p-2">0</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="p-2">Hộp Mực Máy in Canon LBP 3300</td>
+                                <td class="text-right p-2">0</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="p-2">Chân Đế Chữ L chuyên dùng cho tất cả các loại camera gắn tường xoay 360</td>
+                                <td class="text-right p-2">30</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Sales Form -->
+            <div class="col-span-4 bg-white rounded-lg shadow p-4">
+                <div class="grid grid-cols-2 gap-4 mb-4">
+                    <div>
+                        <label class="block text-sm text-gray-600">Tên KH:</label>
+                        <input type="text" class="w-full p-2 border rounded">
+                    </div>
+                    <div>
+                        <label class="block text-sm text-gray-600">Mã KH:</label>
+                        <input type="text" class="w-full p-2 border rounded">
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm text-gray-600">Địa chỉ:</label>
+                    <input type="text" class="w-full p-2 border rounded">
+                </div>
+                <div class="grid grid-cols-3 gap-4 mb-4">
+                    <div>
+                        <label class="block text-sm text-gray-600">SL:</label>
+                        <input type="text" class="w-full p-2 border rounded">
+                    </div>
+                    <div>
+                        <label class="block text-sm text-gray-600">Đơn giá:</label>
+                        <input type="text" class="w-full p-2 border rounded">
+                    </div>
+                    <div>
+                        <label class="block text-sm text-gray-600">SLKM:</label>
+                        <input type="text" class="w-full p-2 border rounded">
+                    </div>
+                </div>
+
+                <!-- Sales Table -->
+                <div class="border rounded overflow-hidden mb-4">
+                    <table class="w-full">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="text-left p-2">Tên Hàng</th>
+                                <th class="text-right p-2">SL</th>
+                                <th class="text-right p-2">Đơn Giá</th>
+                                <th class="text-right p-2">Thành Tiền</th>
+                                <th class="text-right p-2">SLKM</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Notes -->
+                <div class="mb-4">
+                    <label class="block text-sm text-gray-600">Ghi chú:</label>
+                    <textarea class="w-full p-2 border rounded" rows="3"></textarea>
+                </div>
+
+                <!-- Total -->
+                <div class="flex justify-between items-center bg-gray-50 p-4 rounded">
+                    <span class="font-bold">Tổng cộng:</span>
+                    <span class="font-bold text-xl">0 đ</span>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex justify-end space-x-2 mt-4">
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                        <i class="fas fa-save mr-2"></i>Lưu
+                    </button>
+                    <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
+                        <i class="fas fa-times mr-2"></i>Hủy
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
